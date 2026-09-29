@@ -1,0 +1,58 @@
+{
+  "状态": "修复完成，用户验收通过",
+  "版本": "V1.3-ColorOS17-fix7 (80)",
+  "完成检查时间": "2026-09-29T08:50:23.758222+08:00",
+  "设备": "OPPO PME110 / ColorOS 17.0.0.102",
+  "SHA256": "bced63973764116e981268563912144240827d1ce426eaece7d2b331d5dc2414",
+  "修复前": {
+    "result": "FAIL",
+    "source": "evidence/fix7-before-dump.txt",
+    "container_width_px": 178,
+    "visible_icons": {
+      "volume": 54,
+      "bluetooth": 54
+    },
+    "residual_width_px": 70,
+    "max_residual_px": 18
+  },
+  "修复后": {
+    "result": "PASS",
+    "source": "evidence/fix7-after-dump.txt",
+    "container_width_px": 108,
+    "visible_icons": {
+      "volume": 54,
+      "bluetooth": 54
+    },
+    "residual_width_px": 0,
+    "max_residual_px": 18
+  },
+  "已完成检查": [
+    "真机旧版多余占位70px，修复后0px",
+    "蓝牙和振动图标保留",
+    "锁屏截图间距正常",
+    "Wi-Fi与stacked_mobile的系统可见状态变为HIDDEN",
+    "SystemUI重启后入口正常，PID3580",
+    "本轮SystemUI无AndroidRuntime错误",
+    "实际安装APK与交付APK的SHA256一致",
+    "原版模块停用，修复版启用，设置保留"
+  ],
+  "证据": [
+    "fix7-before.png",
+    "fix7-after.png",
+    "fix7-before-gap.json",
+    "fix7-after-gap.json",
+    "fix7-installed-verification.json",
+    "fix7-crash-check.txt"
+  ],
+  "验收确认时间": "2026-09-29T09:05:10.672517+08:00",
+  "用户验收": {
+    "来源等级": "用户告知",
+    "原话": "验证通过。",
+    "范围说明": "用户确认修复后的使用效果通过，未逐项列出测试场景。"
+  },
+  "未由工具补测的场景": [
+    "解锁后桌面及浅色页面视觉回归",
+    "通知面板、控制中心及Wi-Fi切换后间距保持正常"
+  ],
+  "证据边界": "以下场景在手机断连后未由工具补测；最终验收依据用户明确确认，不将其记为工具实测。"
+}
